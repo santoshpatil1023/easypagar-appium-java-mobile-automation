@@ -23,53 +23,54 @@ public class UserApplyLeavePage {
         this.driver = driver;
         this.utils = new TestUtils(driver);
     }
-    
+
     // Actions
     public boolean isApplyLeavePageDisplayed() {
         return utils.isElementPresent(applyLeaveHeader, 10);
     }
 
-	public void clickForApplyButton() {
+    public void clickForApplyButton() {
         utils.clickWhenClickable(clickFab, 10);
-	}
+    }
 
-	public boolean isLeaveApplyFormDisplayed() {
+    public boolean isLeaveApplyFormDisplayed() {
         return utils.isElementPresent(calender, 10);
-	}
-	
-	public void openLeaveDropdown() {
-        utils.clickWhenClickable(AppiumBy.xpath("//android.view.ViewGroup[@resource-id=\"card\"]/android.view.ViewGroup[3]"), 10);
-	}
-	
-	public void selectLeaveType(String LeaveType) {
-	    String selector = "//android.widget.TextView[@text='" + LeaveType + "']";
-	    utils.clickWhenClickable(AppiumBy.xpath(selector), 10);
-	}
+    }
 
-	public void clickOnCalender() {
+    public void openLeaveDropdown() {
+        utils.clickWhenClickable(
+                AppiumBy.xpath("//android.view.ViewGroup[@resource-id=\"card\"]/android.view.ViewGroup[3]"), 10);
+    }
+
+    public void selectLeaveType(String LeaveType) {
+        String selector = "//android.widget.TextView[@text='" + LeaveType + "']";
+        utils.clickWhenClickable(AppiumBy.xpath(selector), 10);
+    }
+
+    public void clickOnCalender() {
         utils.clickWhenClickable(calender, 10);
-	}
+    }
 
-	public void selectDate(String date) {
-	    String selector = "new UiSelector().resourceId(\"undefined.day_" + date + "\")";
-	    utils.clickWhenClickable(AppiumBy.androidUIAutomator(selector), 10);
-	}
-	
+    public void selectDate(String date) {
+        String selector = "new UiSelector().resourceId(\"undefined.day_" + date + "\")";
+        utils.clickWhenClickable(AppiumBy.androidUIAutomator(selector), 10);
+    }
+
     public void eneteReason(String msg) {
         utils.sendKeys(resonField, msg, 10);
-//        utils.pressBackButton();
+        // utils.pressBackButton();
     }
-    
+
     public void submitBtn() {
         utils.clickWhenClickable(submit, 10);
     }
 
-	public void OkPopUp() {
-        utils.clickWhenClickable(okpopup, 10);		
-	}
+    public void OkPopUp() {
+        utils.clickWhenClickable(okpopup, 10);
+    }
 
-	public void backTodashBoard() {
-//        utils.pressBackButton();		
-        utils.pressBackButton();		
-       }	        
+    public void backTodashBoard() {
+        // utils.pressBackButton();
+        utils.pressBackButton();
+    }
 }

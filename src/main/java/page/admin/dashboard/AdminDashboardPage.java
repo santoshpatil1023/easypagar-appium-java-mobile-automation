@@ -8,25 +8,28 @@ import utils.TestUtils;
 public class AdminDashboardPage {
     private AndroidDriver driver;
     private TestUtils utils;
-    
 
-    // Sidebar 
+    // Sidebar
     private By menuButton = AppiumBy.xpath("//android.widget.TextView[@text='󰚈']");
-    
+
     // Main Dashboard Elements
     private By efficiencyText = AppiumBy.xpath("//android.widget.TextView[contains(@text, 'Efficiency')]");
     private By branchName = AppiumBy.xpath("//android.widget.TextView[contains(@text, 'Aditya Birla Branch')]");
     private By moreBranchesBtn = AppiumBy.xpath("//android.widget.TextView[@text='More Branches +']");
 
-    // Locators     // Dashboard Quick Action Buttons
+    // Locators // Dashboard Quick Action Buttons
     private By myEmployee = AppiumBy.xpath("//android.widget.TextView[@text='My Employee']");
-    private By messages = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup");
-//    private By banners = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup");
-    private By banners = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(3)");
-    
-  // cards
-    private By approveLeave = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup");
-    
+    private By messages = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup");
+    // private By banners =
+    // AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup");
+    private By banners = AppiumBy
+            .androidUIAutomator("new UiSelector().className(\"android.widget.ImageView\").instance(3)");
+
+    // cards
+    private By approveLeave = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup");
+
     private By approveExpense = AppiumBy.xpath("//android.widget.TextView[@text='Approve Expense']");
     private By approveLoanAdvance = AppiumBy.xpath("//android.widget.TextView[@text='Approve Loan/Advance']");
     private By dutyRoster = AppiumBy.xpath("//android.widget.TextView[@text='Duty Roster']");
@@ -37,8 +40,8 @@ public class AdminDashboardPage {
         this.driver = driver;
         this.utils = new TestUtils(driver);
     }
-    
-//     Sidebar Access
+
+    // Sidebar Access
     public void openSidebarMenu() {
         utils.clickWhenClickable(menuButton, 10);
     }
@@ -47,7 +50,7 @@ public class AdminDashboardPage {
         utils.clickWhenClickable(myEmployee, 10);
     }
 
-    //1
+    // 1
     public void clickMessages() {
         utils.clickWhenClickable(messages, 10);
     }

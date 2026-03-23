@@ -18,7 +18,7 @@ public class UserTraineePage {
     // Locators
     private By traineePage = AppiumBy.xpath("//android.view.View[@text='Trainee']");
     private By searchTraining = AppiumBy.xpath("//android.widget.EditText[@resource-id='text-input-outlined']");
-    
+
     private By noTrainings = AppiumBy.xpath("//android.widget.TextView[@text='No Trainings Found In This Category']");
 
     // Actions
@@ -38,7 +38,6 @@ public class UserTraineePage {
 
         return isVisible;
     }
-
 
     public void searchTrainings(String asset) {
         if (testUtils.isElementPresent(searchTraining, 5)) {

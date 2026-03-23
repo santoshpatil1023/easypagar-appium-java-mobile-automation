@@ -41,20 +41,17 @@ public class UserMyAssetTest extends BaseTest {
     }
 
     // ✅ Test 2 - depends on Test 1 (reuses same session)
-    @Test(priority = 2, dependsOnMethods = "testMyAssetsPageDisplayed",
-          description = "Verify asset search or no assets message")
+    @Test(priority = 2, dependsOnMethods = "testMyAssetsPageDisplayed", description = "Verify asset search or no assets message")
     public void testSearchMyAssetsIfThere() {
 
         if (myAssetPage.isNoAssetMessageDisplayed()) {
             System.out.println("✅ No assets found message displayed as expected.");
             Assert.assertTrue(true, "No assets available — passed gracefully.");
-        } 
-        else if (myAssetPage.isAnyAssetDisplayed()) {
+        } else if (myAssetPage.isAnyAssetDisplayed()) {
             System.out.println("✅ Assets found, performing search...");
             myAssetPage.searchAsset("HP");
             System.out.println("✅ Asset search completed successfully!");
-        } 
-        else {
+        } else {
             System.out.println("⚠️ Unexpected case — neither assets nor 'no asset' message found.");
             Assert.fail("Could not determine asset state.");
         }

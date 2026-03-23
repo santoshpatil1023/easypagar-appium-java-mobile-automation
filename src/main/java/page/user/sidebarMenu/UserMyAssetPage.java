@@ -19,7 +19,8 @@ public class UserMyAssetPage {
     private By myAssetPage = AppiumBy.xpath("//android.view.View[@text='My Asset']");
     private By searchAsset = AppiumBy.xpath("//android.widget.EditText[@resource-id='text-input-outlined']");
     private By noAssets = AppiumBy.xpath("//android.widget.TextView[@text='No Assets Have Been Assigned To You Yet.']");
-    private By assetItem = AppiumBy.xpath("(//android.widget.TextView[contains(@text,'Asset')])[1]"); // Example first asset item text
+    private By assetItem = AppiumBy.xpath("(//android.widget.TextView[contains(@text,'Asset')])[1]"); // Example first
+                                                                                                      // asset item text
 
     // Actions
     public boolean isMyAssetDisplayed() {

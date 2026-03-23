@@ -102,7 +102,7 @@ public class AdminLoginLogoutTest extends BaseTest {
         System.out.println("Entering invalid credentials...");
         loginPage.enterUsername(invalidUsername);
         loginPage.enterPassword(invalidPassword);
-        
+
         loginPage.tapLogin();
 
         // Verify error message

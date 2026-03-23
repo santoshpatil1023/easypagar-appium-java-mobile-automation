@@ -40,10 +40,10 @@ public class BaseTest {
             // --- Small set of non-invasive stability capabilities ---
             // Helps prevent UiAutomator2 crashes/timeouts on some devices
             options.setCapability("uiautomator2ServerInstallTimeout", 60000); // ms
-            options.setCapability("uiautomator2ServerLaunchTimeout", 60000);  // ms
-            options.setCapability("adbExecTimeout", 60000);                   // ms
-            options.setCapability("allowTestPackages", true);                 // prevents some OEM kills
-            options.setCapability("skipDeviceInitialization", true);          // speeds startup
+            options.setCapability("uiautomator2ServerLaunchTimeout", 60000); // ms
+            options.setCapability("adbExecTimeout", 60000); // ms
+            options.setCapability("allowTestPackages", true); // prevents some OEM kills
+            options.setCapability("skipDeviceInitialization", true); // speeds startup
             // Do NOT set unicodeKeyboard/resetKeyboard here (avoids keyboard issues)
 
             // Appium server URL

@@ -45,8 +45,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 2️⃣ Attendance Videos
-    @Test(priority = 2, dependsOnMethods = "testHelpVideosPageDisplayed",
-          description = "Verify Attendance Help Video is displayed")
+    @Test(priority = 2, dependsOnMethods = "testHelpVideosPageDisplayed", description = "Verify Attendance Help Video is displayed")
     public void testAttendanceHelpVideos() {
         helpVideosPage.selectAttendanceHelpVideos();
         Assert.assertTrue(helpVideosPage.isAttendanceHelpVideoAvailable(),
@@ -56,8 +55,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 3️⃣ Leave Videos
-    @Test(priority = 3, dependsOnMethods = "testAttendanceHelpVideos",
-          description = "Verify Leave Help Video is displayed")
+    @Test(priority = 3, dependsOnMethods = "testAttendanceHelpVideos", description = "Verify Leave Help Video is displayed")
     public void testLeaveHelpVideos() {
         helpVideosPage.selectLeaveHelpVideos();
         Assert.assertTrue(helpVideosPage.isLeaveHelpVideosAvailable(),
@@ -67,8 +65,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 4️⃣ Loan Videos
-    @Test(priority = 4, dependsOnMethods = "testLeaveHelpVideos",
-          description = "Verify Loan Help Video is displayed")
+    @Test(priority = 4, dependsOnMethods = "testLeaveHelpVideos", description = "Verify Loan Help Video is displayed")
     public void testLoanHelpVideos() {
         helpVideosPage.selectLoanHelpVideos();
         Assert.assertTrue(helpVideosPage.isLoanHelpVideosAvailable(),
@@ -78,8 +75,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 5️⃣ Report Videos
-    @Test(priority = 5, dependsOnMethods = "testLoanHelpVideos",
-          description = "Verify Report Help Video is displayed")
+    @Test(priority = 5, dependsOnMethods = "testLoanHelpVideos", description = "Verify Report Help Video is displayed")
     public void testReportHelpVideos() {
         helpVideosPage.selectReportHelpVideos();
         Assert.assertTrue(helpVideosPage.isReportHelpVideosAvailable(),
@@ -89,8 +85,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 6️⃣ Expense Videos
-    @Test(priority = 6, dependsOnMethods = "testReportHelpVideos",
-          description = "Verify Expense Help Video is displayed")
+    @Test(priority = 6, dependsOnMethods = "testReportHelpVideos", description = "Verify Expense Help Video is displayed")
     public void testExpenseHelpVideos() {
         helpVideosPage.selectExpenseHelpVideos();
         Assert.assertTrue(helpVideosPage.isExpenseVideosAvailale(),
@@ -100,8 +95,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 7️⃣ Message Videos
-    @Test(priority = 7, dependsOnMethods = "testExpenseHelpVideos",
-          description = "Verify Message Help Video is displayed")
+    @Test(priority = 7, dependsOnMethods = "testExpenseHelpVideos", description = "Verify Message Help Video is displayed")
     public void testMessageHelpVideos() {
         helpVideosPage.selectMessageHelpVideos();
         Assert.assertTrue(helpVideosPage.isMessagesHelpVideosAvailable(),
@@ -112,8 +106,7 @@ public class UserHelpVideosTest extends BaseTest {
     }
 
     // 8️⃣ Logout at the end
-    @Test(priority = 8, dependsOnMethods = "testMessageHelpVideos",
-          description = "Verify user can logout successfully after viewing help videos")
+    @Test(priority = 8, dependsOnMethods = "testMessageHelpVideos", description = "Verify user can logout successfully after viewing help videos")
     public void testLogoutAfterHelpVideos() {
         sidebarMenuPage.openSidebarMenu();
         sidebarMenuPage.selectLogoutOption();

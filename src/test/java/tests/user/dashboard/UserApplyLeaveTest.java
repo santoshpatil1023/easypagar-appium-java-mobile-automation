@@ -24,11 +24,11 @@ public class UserApplyLeaveTest extends BaseTest {
         userDashboard = new UserDashboardPage(driver);
         applyLeavePage = new UserApplyLeavePage(driver);
         sidebarMenuPage = new UserSidebarMenuPage(driver);
-    }   
-    
-//    String username = ConfigReader.get("user.username");
-//    String password = ConfigReader.get("user.password");
-    
+    }
+
+    // String username = ConfigReader.get("user.username");
+    // String password = ConfigReader.get("user.password");
+
     String username = "9999993331";
     String password = "123456";
 
@@ -36,32 +36,32 @@ public class UserApplyLeaveTest extends BaseTest {
     private void loginAssUser() {
         loginPage.loginAsUser(username, password);
     }
-    
+
     @Test(priority = 1)
     public void userLoginTest() {
         loginAssUser();
         System.out.println("🔐 User logged in successfully.");
     }
-    
-	@Test(priority = 2, dependsOnMethods = "userLoginTest")
-	public void openApplyLeaveSection() {
 
-	    userDashboard.clickApplyLeave();
-	
-	    Assert.assertTrue(applyLeavePage.isApplyLeavePageDisplayed(),
-	            "Apply Leave  page was not displayed!");
+    @Test(priority = 2, dependsOnMethods = "userLoginTest")
+    public void openApplyLeaveSection() {
+
+        userDashboard.clickApplyLeave();
+
+        Assert.assertTrue(applyLeavePage.isApplyLeavePageDisplayed(),
+                "Apply Leave  page was not displayed!");
         System.out.println("✅ Apply Leave page opened successfully.");
 
-	}
-	
-	@Test(priority = 3, dependsOnMethods = "openApplyLeaveSection")
-	public void applyForLeaveTest() {
+    }
 
-		applyLeavePage.clickForApplyButton();
-//        Assert.assertTrue(applyLeavePage.isLeaveApplyFormDisplayed(),
-//                "Apply leave form was not displayed!");
+    @Test(priority = 3, dependsOnMethods = "openApplyLeaveSection")
+    public void applyForLeaveTest() {
+
+        applyLeavePage.clickForApplyButton();
+        // Assert.assertTrue(applyLeavePage.isLeaveApplyFormDisplayed(),
+        // "Apply leave form was not displayed!");
         System.out.println("✓ Apply leave form opened");
-        
+
         applyLeavePage.clickOnCalender();
         applyLeavePage.selectDate("2026-01-25");
         applyLeavePage.clickOnCalender();
@@ -70,16 +70,16 @@ public class UserApplyLeaveTest extends BaseTest {
         applyLeavePage.eneteReason("Need a leave to enjoy");
         applyLeavePage.submitBtn();
         applyLeavePage.OkPopUp();
-        
+
         Assert.assertTrue(applyLeavePage.isApplyLeavePageDisplayed(),
                 "Messages page was not displayed!");
-        
+
         System.out.println("Returned back to the Apply leave HomePage after Successful leave apply.");
-	}
-	
-    @Test(priority = 4)//,dependsOnMethods = "applyForLeaveTest")
+    }
+
+    @Test(priority = 4) // ,dependsOnMethods = "applyForLeaveTest")
     public void logOutAterApplyLeave() {
-//    	applyLeavePage.backTodashBoard();
+        // applyLeavePage.backTodashBoard();
         sidebarMenuPage.openSidebarMenu();
         sidebarMenuPage.selectLogoutOption();
         sidebarMenuPage.confirmLogout();

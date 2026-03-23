@@ -10,25 +10,33 @@ public class UserDashboardPage {
     private TestUtils utils;
 
     // Locators
-    private By myAttendance = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup");
-    private By myAttendance1 = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(50)");
-    
-    private By dutyRoaster = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup");
+    private By myAttendance = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup");
+    private By myAttendance1 = AppiumBy
+            .androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(50)");
+
+    private By dutyRoaster = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup");
     private By myDocuments = AppiumBy.xpath("//android.widget.TextView[@text='My Document's']");
-    
-    private By applyLeave = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup");
-    private By applyLeave1 = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(56)");
-    
-    private By applyExpense = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup");
-    private By applyLoanAdvance = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup");
-    
-    private By messages = AppiumBy.xpath("//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup");
-    
+
+    private By applyLeave = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup");
+    private By applyLeave1 = AppiumBy
+            .androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(56)");
+
+    private By applyExpense = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup");
+    private By applyLoanAdvance = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup");
+
+    private By messages = AppiumBy.xpath(
+            "//android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup");
+
     private By myReports = AppiumBy.xpath("//android.widget.TextView[@text='My Reports']");
     private By easyTracker = AppiumBy.xpath("//android.widget.TextView[@text='EasyTracker']");
     private By welcomeText = AppiumBy.xpath("//android.widget.TextView[contains(@text, 'Hi,')]");
     private By backToDashboard = AppiumBy.xpath("//android.widget.TextView[@text='Back']");
-  
+
     public UserDashboardPage(AndroidDriver driver) {
         this.driver = driver;
         this.utils = new TestUtils(driver);
@@ -79,7 +87,7 @@ public class UserDashboardPage {
         return utils.isElementPresent(myAttendance, 10);
     }
 
-	public void goToDashboard() {
+    public void goToDashboard() {
         utils.clickWhenClickable(backToDashboard, 10);
-	}
+    }
 }

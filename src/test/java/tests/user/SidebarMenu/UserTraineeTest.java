@@ -39,8 +39,7 @@ public class UserTraineeTest extends BaseTest {
         System.out.println("✅ Trainee page displayed successfully!");
     }
 
-    @Test(priority = 2, dependsOnMethods = "testTraineePageDisplayed",
-          description = "Verify trainings are available or show 'No Trainings Found' message")
+    @Test(priority = 2, dependsOnMethods = "testTraineePageDisplayed", description = "Verify trainings are available or show 'No Trainings Found' message")
     public void testSearchTrainingsIfThere() {
         if (traineePage.isNoTrainingsDisplayed()) {
             System.out.println("✅ No Trainings Found message displayed and returned to Dashboard successfully.");
@@ -52,7 +51,7 @@ public class UserTraineeTest extends BaseTest {
         }
 
         System.out.println("=== ✅ Trainee Module Test Completed Successfully ===");
-        
+
         sidebarMenuPage.openSidebarMenu();
         sidebarMenuPage.selectLogoutOption();
         sidebarMenuPage.confirmLogout();

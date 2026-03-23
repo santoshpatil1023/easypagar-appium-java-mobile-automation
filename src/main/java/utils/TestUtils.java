@@ -32,12 +32,12 @@ public class TestUtils {
 
     // Basic element interaction methods
     public WebElement waitForVisible(By locator, int timeoutSeconds) {
-         customWait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+        customWait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
         return customWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public void clickWhenClickable(By locator, int timeoutSeconds) {
-         customWait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
+        customWait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
         WebElement el = customWait.until(ExpectedConditions.elementToBeClickable(locator));
         el.click();
     }
@@ -56,7 +56,7 @@ public class TestUtils {
             return false;
         }
     }
-    
+
     public String getElementText(By locator, int timeoutSeconds) {
         try {
             WebElement element = waitForVisible(locator, timeoutSeconds);
@@ -65,7 +65,7 @@ public class TestUtils {
             return "";
         }
     }
-    
+
     // Enhanced wait methods
     public void waitForElementToBeInvisible(By locator, int timeoutSeconds) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutSeconds));
@@ -82,7 +82,6 @@ public class TestUtils {
         wait.until(ExpectedConditions.textToBe(locator, text));
     }
 
-    
     // 🔑 Keyboard utility methods
     public void pressBackButton() {
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
@@ -103,7 +102,7 @@ public class TestUtils {
     public void pressKey(AndroidKey key) {
         driver.pressKey(new KeyEvent(key));
     }
-    
+
     public String takeScreenshot(String testName) {
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String path = System.getProperty("user.dir") + "/reports/screenshots/" + testName + ".png";
@@ -114,10 +113,8 @@ public class TestUtils {
         }
         return path;
     }
-    
-    
-    
-    //SIMPLIFIED SCROLL METHOD
+
+    // SIMPLIFIED SCROLL METHOD
     public void scrollDown() {
         Map<String, Object> params = new HashMap<>();
         params.put("left", 100);
@@ -130,7 +127,6 @@ public class TestUtils {
         driver.executeScript("mobile: scrollGesture", params);
     }
 
-    
     public void scrollUp() {
         Map<String, Object> params = new HashMap<>();
         params.put("left", 100);
@@ -142,7 +138,6 @@ public class TestUtils {
 
         driver.executeScript("mobile: scrollGesture", params);
     }
-
 
     public void scrollDown1() {
         Map<String, Object> params = new HashMap<>();
@@ -156,7 +151,6 @@ public class TestUtils {
         driver.executeScript("mobile: scrollGesture", params);
     }
 
-
     // Method 1: Simple scroll down
     public void scrollDown11() {
         try {
@@ -164,7 +158,7 @@ public class TestUtils {
             int startX = size.width / 2;
             int startY = (int) (size.height * 0.8);
             int endY = (int) (size.height * 0.2);
-            
+
             JavascriptExecutor js = (JavascriptExecutor) driver;
             Map<String, Object> params = new HashMap<>();
             params.put("startX", startX);
@@ -172,10 +166,10 @@ public class TestUtils {
             params.put("endX", startX);
             params.put("endY", endY);
             params.put("duration", 500);
-            
+
             js.executeScript("mobile: swipeGesture", params);
             Thread.sleep(1000);
-            
+
         } catch (Exception e) {
             System.out.println("Scroll down failed: " + e.getMessage());
         }
@@ -184,33 +178,33 @@ public class TestUtils {
     // Method 2: Scroll to specific text
     public boolean scrollToText(String text, int maxAttempts) {
         System.out.println("Scrolling to text: '" + text + "'");
-        
+
         for (int attempt = 1; attempt <= maxAttempts; attempt++) {
             try {
                 driver.findElement(AppiumBy.androidUIAutomator(
-                    "new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView(\"" + text + "\")"
-                ));
+                        "new UiScrollable(new UiSelector().scrollable(true)).scrollTextIntoView(\"" + text + "\")"));
                 System.out.println("✅ Found text: " + text);
                 return true;
-                
+
             } catch (Exception e) {
                 System.out.println("Scroll attempt " + attempt + " failed");
                 scrollDown();
             }
         }
-        
+
         System.out.println("❌ Text not found: " + text);
         return false;
     }
-    
+
     // Redmi
-//    admin
+    // admin
     // ✅ Scroll DOWN inside sidebar
     public void scrollSidebarDown() {
         try {
             System.out.println("🔽 Scrolling down inside the sidebar...");
             // Option 2: Using UIAutomator with more reliable selector
-            WebElement sidebar = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(78)"));
+            WebElement sidebar = driver.findElement(
+                    AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(78)"));
 
             Map<String, Object> params = new HashMap<>();
             params.put("elementId", ((RemoteWebElement) sidebar).getId());
@@ -228,13 +222,13 @@ public class TestUtils {
     public void scrollSidebarUp() {
         try {
             System.out.println("🔼 Scrolling up inside the sidebar...");
-//            WebElement sidebar = driver.findElement(AppiumBy.androidUIAutomator(
-//                    "new UiSelector().className(\"android.view.ViewGroup\").scrollable(true)"
-//                ));
-            
-            WebElement sidebar = driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(78)"));
+            // WebElement sidebar = driver.findElement(AppiumBy.androidUIAutomator(
+            // "new UiSelector().className(\"android.view.ViewGroup\").scrollable(true)"
+            // ));
 
-            
+            WebElement sidebar = driver.findElement(
+                    AppiumBy.androidUIAutomator("new UiSelector().className(\"android.view.ViewGroup\").instance(78)"));
+
             Map<String, Object> params = new HashMap<>();
             params.put("elementId", ((RemoteWebElement) sidebar).getId());
             params.put("direction", "up");

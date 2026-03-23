@@ -21,8 +21,8 @@ public class UserEditProfileTest2 extends BaseTest {
         loginPage = new LoginPage(driver);
         sidebarMenuPage = new UserSidebarMenuPage(driver);
         editProfilePage = new UserEditProfilePage(driver);
-    }   
-    
+    }
+
     String username = ConfigReader.get("user.username");
     String password = ConfigReader.get("user.password");
 
@@ -38,27 +38,26 @@ public class UserEditProfileTest2 extends BaseTest {
 
         sidebarMenuPage.openSidebarMenu();
 
-        //Navigate to Edit Profile
+        // Navigate to Edit Profile
         sidebarMenuPage.selectEditProfile();
 
-        //Update Guardian Name
+        // Update Guardian Name
         editProfilePage.updateGuardianName("Ramesh Patil");
         editProfilePage.clickUpdate();
 
         Assert.assertTrue(editProfilePage.isSaveConfirmationVisible(), "❌ Profile not updated!");
-        
+
         System.out.println("=== user profile upadte Test Completed ===");
     }
-    
-    @Test(priority = 2, dependsOnMethods = "testUpdateGuardianName",
-            description = "Verify user can logout successfully after editing the profile")
-      public void testLogoutAfterEditProfile() {
-          sidebarMenuPage.openSidebarMenu();
-          sidebarMenuPage.selectLogoutOption();
-          sidebarMenuPage.confirmLogout();
 
-          Assert.assertTrue(loginPage.isLoginPageDisplayed(),
-                  "❌ Failed to return to Login Page after logout!");
-          System.out.println("✅ User logged out successfully after completing Edit Profile validation!");
-      }
+    @Test(priority = 2, dependsOnMethods = "testUpdateGuardianName", description = "Verify user can logout successfully after editing the profile")
+    public void testLogoutAfterEditProfile() {
+        sidebarMenuPage.openSidebarMenu();
+        sidebarMenuPage.selectLogoutOption();
+        sidebarMenuPage.confirmLogout();
+
+        Assert.assertTrue(loginPage.isLoginPageDisplayed(),
+                "❌ Failed to return to Login Page after logout!");
+        System.out.println("✅ User logged out successfully after completing Edit Profile validation!");
+    }
 }
