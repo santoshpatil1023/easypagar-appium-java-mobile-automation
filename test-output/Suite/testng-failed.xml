@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="tests.user.SidebarMenu.UserEditProfileTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testUpdateGuardianName"/>
+          <include name="setUpPages"/>
+        </methods>
+      </class> <!-- tests.user.SidebarMenu.UserEditProfileTest -->
+      <class name="tests.user.SidebarMenu.UserMyAssetTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="testMyAssetsPageDisplayed"/>
+          <include name="testSearchMyAssetsIfThere"/>
+          <include name="setUpPages"/>
+        </methods>
+      </class> <!-- tests.user.SidebarMenu.UserMyAssetTest -->
+      <class name="tests.user.SidebarMenu.UserHelpVideosTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testMessageHelpVideos"/>
+          <include name="tearDown"/>
+          <include name="testLoanHelpVideos"/>
+          <include name="testLeaveHelpVideos"/>
+          <include name="testLogoutAfterHelpVideos"/>
+          <include name="setUpPages"/>
+          <include name="testExpenseHelpVideos"/>
+          <include name="testReportHelpVideos"/>
+          <include name="testHelpVideosPageDisplayed"/>
+          <include name="testAttendanceHelpVideos"/>
+        </methods>
+      </class> <!-- tests.user.SidebarMenu.UserHelpVideosTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

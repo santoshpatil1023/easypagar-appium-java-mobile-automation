@@ -1,0 +1,531 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/3/8</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 11 10:26:23 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>232 seconds (232700 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testHelpVideosPageDisplayed()'><b>testHelpVideosPageDisplayed</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Help Videos page is displayed successfully</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.FrameLayout[@resource-id=&apos;android:id/content&apos;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\HP\eclipse-workspa..., appium:appActivity: com.pagarplus.app.MainActivity, appium:appPackage: com.pagarplus.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HP\eclipse-workspa..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Device, fullReset: false, ignoreHiddenApiPolicyError: true, newCommandTimeout: 300, noReset: true, platformName: ANDROID, udid: 8HN7RSTGQ8LJNFGA}, appium:deviceApiLevel: 28, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2015, appium:deviceName: 8HN7RSTGQ8LJNFGA, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 8HN7RSTGQ8LJNFGA, appium:fullReset: false, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 56, appium:takesScreenshot: true, appium:udid: 8HN7RSTGQ8LJNFGA, appium:viewportRect: {height: 1544, left: 0, top: 56, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 77bc5839-ecfd-4b2f-a59c-5a7f09042267
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.TestUtils.clickWhenClickable(TestUtils.java:41)
+	at page.common.LoginPage.selectEasyPagar(LoginPage.java:46)
+	at page.common.LoginPage.navigateToLoginScreen(LoginPage.java:145)
+	at page.common.LoginPage.loginAsUser(LoginPage.java:156)
+	at tests.user.SidebarMenu.UserHelpVideosTest.loginAsUser(UserHelpVideosTest.java:33)
+	at tests.user.SidebarMenu.UserHelpVideosTest.testHelpVideosPageDisplayed(UserHelpVideosTest.java:39)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1120043781", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1120043781'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.FrameLayout[@resource-id=&apos;android:id/content&apos;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\HP\eclipse-workspa..., appium:appActivity: com.pagarplus.app.MainActivity, appium:appPackage: com.pagarplus.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HP\eclipse-workspa..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Device, fullReset: false, ignoreHiddenApiPolicyError: true, newCommandTimeout: 300, noReset: true, platformName: ANDROID, udid: 8HN7RSTGQ8LJNFGA}, appium:deviceApiLevel: 28, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2015, appium:deviceName: 8HN7RSTGQ8LJNFGA, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 8HN7RSTGQ8LJNFGA, appium:fullReset: false, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 56, appium:takesScreenshot: true, appium:udid: 8HN7RSTGQ8LJNFGA, appium:viewportRect: {height: 1544, left: 0, top: 56, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 77bc5839-ecfd-4b2f-a59c-5a7f09042267
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.TestUtils.clickWhenClickable(TestUtils.java:41)
+	at page.common.LoginPage.selectEasyPagar(LoginPage.java:46)
+	at page.common.LoginPage.navigateToLoginScreen(LoginPage.java:145)
+	at page.common.LoginPage.loginAsUser(LoginPage.java:156)
+	at tests.user.SidebarMenu.UserHelpVideosTest.loginAsUser(UserHelpVideosTest.java:33)
+	at tests.user.SidebarMenu.UserHelpVideosTest.testHelpVideosPageDisplayed(UserHelpVideosTest.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>41</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserMyAssetTest.testMyAssetsPageDisplayed()'><b>testMyAssetsPageDisplayed</b><br>Test class: tests.user.SidebarMenu.UserMyAssetTest<br>Test method: Verify My Asset page is displayed successfully</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.ViewGroup[@content-desc=&apos;English&apos;]/android.widget.ImageView (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\HP\eclipse-workspa..., appium:appActivity: com.pagarplus.app.MainActivity, appium:appPackage: com.pagarplus.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HP\eclipse-workspa..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Device, fullReset: false, ignoreHiddenApiPolicyError: true, newCommandTimeout: 300, noReset: true, platformName: ANDROID, udid: 8HN7RSTGQ8LJNFGA}, appium:deviceApiLevel: 28, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2015, appium:deviceName: 8HN7RSTGQ8LJNFGA, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 8HN7RSTGQ8LJNFGA, appium:fullReset: false, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 56, appium:takesScreenshot: true, appium:udid: 8HN7RSTGQ8LJNFGA, appium:viewportRect: {height: 1544, left: 0, top: 56, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 08897da2-793e-4f1f-8bca-b38157ca7710
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.TestUtils.clickWhenClickable(TestUtils.java:41)
+	at page.common.LoginPage.selectEnglish(LoginPage.java:54)
+	at page.common.LoginPage.navigateToLoginScreen(LoginPage.java:146)
+	at page.common.LoginPage.loginAsUser(LoginPage.java:156)
+	at tests.user.SidebarMenu.UserMyAssetTest.loginAsUser(UserMyAssetTest.java:29)
+	at tests.user.SidebarMenu.UserMyAssetTest.testMyAssetsPageDisplayed(UserMyAssetTest.java:35)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace95964948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace95964948'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.view.ViewGroup[@content-desc=&apos;English&apos;]/android.widget.ImageView (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\HP\eclipse-workspa..., appium:appActivity: com.pagarplus.app.MainActivity, appium:appPackage: com.pagarplus.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HP\eclipse-workspa..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Device, fullReset: false, ignoreHiddenApiPolicyError: true, newCommandTimeout: 300, noReset: true, platformName: ANDROID, udid: 8HN7RSTGQ8LJNFGA}, appium:deviceApiLevel: 28, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2015, appium:deviceName: 8HN7RSTGQ8LJNFGA, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 8HN7RSTGQ8LJNFGA, appium:fullReset: false, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 56, appium:takesScreenshot: true, appium:udid: 8HN7RSTGQ8LJNFGA, appium:viewportRect: {height: 1544, left: 0, top: 56, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 08897da2-793e-4f1f-8bca-b38157ca7710
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.TestUtils.clickWhenClickable(TestUtils.java:41)
+	at page.common.LoginPage.selectEnglish(LoginPage.java:54)
+	at page.common.LoginPage.navigateToLoginScreen(LoginPage.java:146)
+	at page.common.LoginPage.loginAsUser(LoginPage.java:156)
+	at tests.user.SidebarMenu.UserMyAssetTest.loginAsUser(UserMyAssetTest.java:29)
+	at tests.user.SidebarMenu.UserMyAssetTest.testMyAssetsPageDisplayed(UserMyAssetTest.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>42</td>
+<td>tests.user.SidebarMenu.UserMyAssetTest@2118cddf</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserEditProfileTest.testUpdateGuardianName()'><b>testUpdateGuardianName</b><br>Test class: tests.user.SidebarMenu.UserEditProfileTest<br>Test method: Verify user can update Guardian Name successfully</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.FrameLayout[@resource-id=&apos;android:id/content&apos;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\HP\eclipse-workspa..., appium:appActivity: com.pagarplus.app.MainActivity, appium:appPackage: com.pagarplus.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HP\eclipse-workspa..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Device, fullReset: false, ignoreHiddenApiPolicyError: true, newCommandTimeout: 300, noReset: true, platformName: ANDROID, udid: 8HN7RSTGQ8LJNFGA}, appium:deviceApiLevel: 28, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2015, appium:deviceName: 8HN7RSTGQ8LJNFGA, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 8HN7RSTGQ8LJNFGA, appium:fullReset: false, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 56, appium:takesScreenshot: true, appium:udid: 8HN7RSTGQ8LJNFGA, appium:viewportRect: {height: 1544, left: 0, top: 56, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: bc4f6da8-1e96-4854-baf7-b8cc25003e1f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.TestUtils.clickWhenClickable(TestUtils.java:41)
+	at page.common.LoginPage.selectEasyPagar(LoginPage.java:46)
+	at page.common.LoginPage.navigateToLoginScreen(LoginPage.java:145)
+	at page.common.LoginPage.loginAsUser(LoginPage.java:156)
+	at tests.user.SidebarMenu.UserEditProfileTest.loginAssUser(UserEditProfileTest.java:31)
+	at tests.user.SidebarMenu.UserEditProfileTest.testUpdateGuardianName(UserEditProfileTest.java:37)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace684407333", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace684407333'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //android.widget.FrameLayout[@resource-id=&apos;android:id/content&apos;]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.ImageView (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appium:app: C:\Users\HP\eclipse-workspa..., appium:appActivity: com.pagarplus.app.MainActivity, appium:appPackage: com.pagarplus.app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\HP\eclipse-workspa..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Device, fullReset: false, ignoreHiddenApiPolicyError: true, newCommandTimeout: 300, noReset: true, platformName: ANDROID, udid: 8HN7RSTGQ8LJNFGA}, appium:deviceApiLevel: 28, appium:deviceManufacturer: OPPO, appium:deviceModel: CPH2015, appium:deviceName: 8HN7RSTGQ8LJNFGA, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1600, appium:deviceUDID: 8HN7RSTGQ8LJNFGA, appium:fullReset: false, appium:ignoreHiddenApiPolicyError: true, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:noReset: true, appium:pixelRatio: 2, appium:platformVersion: 9, appium:statBarHeight: 56, appium:takesScreenshot: true, appium:udid: 8HN7RSTGQ8LJNFGA, appium:viewportRect: {height: 1544, left: 0, top: 56, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: bc4f6da8-1e96-4854-baf7-b8cc25003e1f
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at utils.TestUtils.clickWhenClickable(TestUtils.java:41)
+	at page.common.LoginPage.selectEasyPagar(LoginPage.java:46)
+	at page.common.LoginPage.navigateToLoginScreen(LoginPage.java:145)
+	at page.common.LoginPage.loginAsUser(LoginPage.java:156)
+	at tests.user.SidebarMenu.UserEditProfileTest.loginAssUser(UserEditProfileTest.java:31)
+	at tests.user.SidebarMenu.UserEditProfileTest.testUpdateGuardianName(UserEditProfileTest.java:37)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>42</td>
+<td>tests.user.SidebarMenu.UserEditProfileTest@7c1e2a9e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserTraineeTest.testTraineePageDisplayed()'><b>testTraineePageDisplayed</b><br>Test class: tests.user.SidebarMenu.UserTraineeTest<br>Test method: Verify Trainee page is displayed successfully</td>
+<td></td>
+<td>35</td>
+<td>tests.user.SidebarMenu.UserTraineeTest@fa36558</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserTraineeTest.testSearchTrainingsIfThere()'><b>testSearchTrainingsIfThere</b><br>Test class: tests.user.SidebarMenu.UserTraineeTest<br>Test method: Verify trainings are available or show 'No Trainings Found' message</td>
+<td></td>
+<td>7</td>
+<td>tests.user.SidebarMenu.UserTraineeTest@fa36558</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testAttendanceHelpVideos()'><b>testAttendanceHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Attendance Help Video is displayed</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testAttendanceHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testHelpVideosPageDisplayed() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2098830440", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2098830440'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testAttendanceHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testHelpVideosPageDisplayed() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testLoanHelpVideos()'><b>testLoanHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Loan Help Video is displayed</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testLoanHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testLeaveHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2189588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2189588'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testLoanHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testLeaveHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testExpenseHelpVideos()'><b>testExpenseHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Expense Help Video is displayed</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testExpenseHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testReportHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1565614310", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1565614310'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testExpenseHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testReportHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testLeaveHelpVideos()'><b>testLeaveHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Leave Help Video is displayed</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testLeaveHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testAttendanceHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace902654164", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace902654164'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testLeaveHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testAttendanceHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testReportHelpVideos()'><b>testReportHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Report Help Video is displayed</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testReportHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testLoanHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace896945135", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace896945135'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testReportHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testLoanHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserMyAssetTest.testSearchMyAssetsIfThere()'><b>testSearchMyAssetsIfThere</b><br>Test class: tests.user.SidebarMenu.UserMyAssetTest<br>Test method: Verify asset search or no assets message</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserMyAssetTest.testSearchMyAssetsIfThere() on instance tests.user.SidebarMenu.UserMyAssetTest@2118cddf depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserMyAssetTest.testMyAssetsPageDisplayed() on instance tests.user.SidebarMenu.UserMyAssetTest@2118cddf]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1193710204", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1193710204'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserMyAssetTest.testSearchMyAssetsIfThere() on instance tests.user.SidebarMenu.UserMyAssetTest@2118cddf depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserMyAssetTest.testMyAssetsPageDisplayed() on instance tests.user.SidebarMenu.UserMyAssetTest@2118cddf]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserMyAssetTest@2118cddf</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testMessageHelpVideos()'><b>testMessageHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify Message Help Video is displayed</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testMessageHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testExpenseHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace688113407", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace688113407'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testMessageHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testExpenseHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+<tr>
+<td title='tests.user.SidebarMenu.UserHelpVideosTest.testLogoutAfterHelpVideos()'><b>testLogoutAfterHelpVideos</b><br>Test class: tests.user.SidebarMenu.UserHelpVideosTest<br>Test method: Verify user can logout successfully after viewing help videos</td>
+<td><div><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testLogoutAfterHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testMessageHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace934223763", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace934223763'><pre>java.lang.Throwable: Method tests.user.SidebarMenu.UserHelpVideosTest.testLogoutAfterHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f depends on not successfully finished methods 
+[tests.user.SidebarMenu.UserHelpVideosTest.testMessageHelpVideos() on instance tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>tests.user.SidebarMenu.UserHelpVideosTest@6236eb5f</td></tr>
+</table><p>
+</body>
+</html>
